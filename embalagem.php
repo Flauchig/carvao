@@ -171,7 +171,8 @@ require_once("config.php");
             padding: 5px 10px;
             color: #FFFFFF;
         }
-        th{
+
+        th {
             text-align: center;
         }
     </style>
@@ -207,7 +208,6 @@ require_once("config.php");
                 <tr>
                     <th>ID</th>
                     <th>Tamanho em KG</th>
-
                     <th>Estoque atual</th>
                     <th>Estoque mínimo</th>
                     <th>valor</th>
@@ -251,10 +251,10 @@ require_once("config.php");
 
             echo "<tr>
                 <td align='center'>$idembalagem<hr></td>
-                 <td align='center'>$tamanho<hr></td>
+                <td align='center'>$tamanho<hr> KG</td>
                 <td align='center'>$estoque_ideal<hr></td>
                 <td align='center'>$estoque_minimo<hr></td>
-                <td align='center'>$valor<hr></td>
+                <td align='center'>R$ $valor <hr></td>
                 <td align='center'>$marca<hr></td>
                 <td align='center' width='160'>
                    <a class='btn_editar' href='embalagem_editar.php?idembalagem=$idembalagem'>Editar</a> 

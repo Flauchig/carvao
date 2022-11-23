@@ -386,7 +386,7 @@ if (isset($_GET['idcliente'])) {
 
                     <div>
                         <input type="submit" name="submit" id="submit" class="btn_enviar">
-                        <input type="button" class="btn_voltar" onclick="location.href='home.php'" value="Voltar">
+                        <input type="button" class="btn_voltar" onclick="location.href='index.php'" value="Voltar">
                     </div>
 
 

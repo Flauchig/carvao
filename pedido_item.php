@@ -5,9 +5,9 @@ if (!isset($_GET['idpedido']) || $_GET['idpedido'] == '') {
 }
 
 $result = "SELECT
-p.data           AS data,
-p.data_entrega   AS data_entrega,
-p.data_pagamento AS data_pagamento,
+date_format( p.data ,'%d/%m/%Y')           AS data,
+date_format ( p.data_entrega , '%d/%m/%Y' )    AS data_entrega,
+date_format( p.data_pagamento , '%d/%m/%Y')  AS data_pagamento,
 c.nome           AS nome  
 FROM
 pedido p 
@@ -339,9 +339,9 @@ $nome = $dados['nome'];
                 //alterna as cores conforme o resto da divisão do X por 2
                 echo "<tr>
                     <td align='center'>$idpedido_item</td>
-                    <td align='center'>$tamanho</td>
+                    <td align='center'>$tamanho KG</td>
                     <td align='center'>$marca</td>
-                    <td align='center'>$valor</td>
+                    <td align='center'> R$ $valor</td>
                     <td align='center'>$qtd</td>
                     <td align='center' width='60'>
                         <a class='btn_excluir' href='pedido_item_excluir.php?idpedido_item=$idpedido_item&idpedido=$idpedido' onClick='return valida_exc();'>Excluir</a>

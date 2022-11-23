@@ -6,9 +6,9 @@ require_once("config.php");
 $result = "SELECT
     p.idpedido,
     c.nome            AS nome,
-    p.data            AS data,
-     p.data_entrega    AS data_entrega,
-    p.data_pagamento  AS data_pagamento   
+    date_format( p.data ,'%d/%m/%Y')           AS data,
+    date_format ( p.data_entrega , '%d/%m/%Y' )    AS data_entrega,
+    date_format( p.data_pagamento , '%d/%m/%Y')  AS data_pagamento   
 FROM
   pedido AS p
   LEFT JOIN cliente AS c ON c.idcliente = p.cliente_idcliente ";
@@ -32,7 +32,7 @@ $resultado_banco = mysqli_query($conexao, $result);
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
 
     <style type="text/css">
-              body {
+        body {
             background-image: url("imagens/carvao-mineral.png");
             background-repeat: no-repeat;
             background-size: 100%;
@@ -158,10 +158,12 @@ $resultado_banco = mysqli_query($conexao, $result);
             left: 5%;
             bottom: 15%;
         }
-        .table{
+
+        .table {
             color: #FFFFFF;
+            background: #2A2A2A;
+
         }
-    
     </style>
 </head>
 
