@@ -212,7 +212,7 @@ if (isset($_GET['idcliente'])) {
             margin-top: 60px;
             width: 80%;
             border-radius: 15px;
-         
+
 
 
         }
@@ -310,7 +310,7 @@ if (isset($_GET['idcliente'])) {
             height: 40px;
             bottom: 50px;
             left: 50%;
-            background: red;       
+            background: red;
             border-radius: 10px;
             color: white;
         }
@@ -323,7 +323,7 @@ if (isset($_GET['idcliente'])) {
         <h1>LOGO</h1>
         <a class="pedido_header" href="pedido_lista.php">Pedidos</a>
         <a class="estoque_header" href="embalagem.php">Estoque</a>
-        <a class="cadastro_header" href="index.php">Cadastro</a>
+        <a class="cadastro_header" href="index.php">Clientes</a>
 
     </header>
     <br><br>
@@ -396,7 +396,27 @@ if (isset($_GET['idcliente'])) {
 
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    <script>
+         $(document).ready(function() {
+        $("#cpf_cnpj").keydown(function() {
+            try {
+                $("#cpf_cnpj").unmask();
+            } catch (e) {}
+
+            var tamanho = $("#cpf_cnpj").val().length;
+
+            if (tamanho < 11) {
+                $("#cpf_cnpj").mask("999.999.999-99");
+            } else {
+                $("#cpf_cnpj").mask("99.999.999/9999-99");
+            }
+        });
+    });
+    </script>
 
 </body>
+
 
 </html>

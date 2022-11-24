@@ -226,7 +226,7 @@ $nome = $dados['nome'];
         <h1>LOGO</h1>
         <a class="pedido_header" href="pedido_lista.php">Pedidos</a>
         <a class="estoque_header" href="embalagem.php">Estoque</a>
-        <a class="cadastro_header" href="index.php">Cadastro</a>
+        <a class="cadastro_header" href="index.php">Clientes</a>
 </header>
     <br><br><br>
 

@@ -183,7 +183,7 @@ require_once("config.php");
         <h1>LOGO</h1>
         <a class="pedido_header" href="pedido_lista.php">Pedidos</a>
         <a class="estoque_header" href="embalagem.php">Estoque</a>
-        <a class="cadastro_header" href="index.php">Cadastro</a>
+        <a class="cadastro_header" href="index.php">Clientes</a>
 
     </header>
     <br><br><br><br><br>
@@ -251,7 +251,7 @@ require_once("config.php");
 
             echo "<tr>
                 <td align='center'>$idembalagem<hr></td>
-                <td align='center'>$tamanho<hr> KG</td>
+                <td align='center'>$tamanho KG<hr> </td>
                 <td align='center'>$estoque_ideal<hr></td>
                 <td align='center'>$estoque_minimo<hr></td>
                 <td align='center'>R$ $valor <hr></td>
